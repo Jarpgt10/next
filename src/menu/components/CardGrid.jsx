@@ -25,6 +25,7 @@ export default function CardGrid() {
                                     <CardFood
                                         key={opt.id_menu_comida}
                                         name={opt.nombre_menu}
+
                                         url_img='https://cdn.pixabay.com/photo/2022/08/29/17/45/burger-7419428_640.jpg'
                                         precio={opt.precio}
                                         id_menu_comida={opt.id_menu_comida} />
