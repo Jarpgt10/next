@@ -5,10 +5,11 @@ export const DashboardContext = createContext();
 
 export const DashboardState = (props) => {
 
-    const initialValues = {}
+
 
     const [shoppinCar, setShoppinCar] = useState([]);
     const [favorites, setFavorites] = useState([]);
+    const [totalShopping, setTotalShopping] = useState(0);
 
 
 
@@ -18,13 +19,17 @@ export const DashboardState = (props) => {
     }, []);
 
 
-    const handleShoppingCar = (data) => {
-        const exist = shoppinCar.some(item => parseInt(item.id_menu_comida) === parseInt(data.id_menu_comida))
+    const handleShoppingCar = (food) => {
+        const exist = shoppinCar.some(item => parseInt(item.id_menu_comida) === parseInt(food.id_menu_comida))
 
         if (exist) {
 
         } else {
-            setShoppinCar([...shoppinCar, data]);
+            const dataTemp = { ...food, cantidad: 1, }
+            const data = [...shoppinCar, dataTemp]
+            const total = data.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+            setShoppinCar(data);
+            setTotalShopping(total)
 
         }
 
@@ -41,6 +46,7 @@ export const DashboardState = (props) => {
                 shoppinCar,
                 handleShoppingCar,
                 favorites,
+                totalShopping,
             }}
         >
             {props.children}
