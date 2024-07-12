@@ -6,7 +6,7 @@ import FooterMenuItem from './FooterMenuItem';
 export default function FooterMenu() {
     const menuOptions = [
         { path: '/dashboard/menu', name: 'Menu', icon: <Icon.food size={30} /> },
-        { path: '/dashboard/shopping', name: 'Order', icon: <Icon.ticket size={30} /> },
+        { path: '/dashboard/shopping', name: 'Order', icon: <Icon.carShopping size={30} /> },
         { path: '/dashboard/favorites', name: 'Favorito', icon: <Icon.heart size={30} /> },
     ];
 

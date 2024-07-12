@@ -4,12 +4,13 @@ import React from 'react'
 export default function ShoppingPage() {
     return (
         <>
-            <div className='flex justify-center items-center mt-16'>
-                <Icon.carShopping2 size={65} color='#9a9b9e' />
+            <div className="p-5 bg-white shadow-md rounded-lg m-5 ">
+                <div className="flex justify-center items-center gap-5 ">
+                    <strong>Carrito</strong>
+                </div>
             </div>
-            <div className='text-[#9a9b9e] text-center'>
-                <strong className=''>Aun sin agregar</strong>
-            </div>
+
+
         </>
     )
 }

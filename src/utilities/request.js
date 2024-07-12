@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-// const dev = 'http://localhost:8080/dp/back/'
-const dev = 'https://dp-production-4aa3.up.railway.app/'
+const dev = 'http://localhost:8080/dp/back/'
+// const dev = 'https://dp-production-4aa3.up.railway.app/'
 
 export const request = async (path, options = {}) => {
   try {

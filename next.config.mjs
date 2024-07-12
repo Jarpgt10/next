@@ -3,13 +3,15 @@
 const nextConfig = {
     images: {
 
-        domains: ['drive.google.com'],
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'media.istockphoto.com',
-            },
-        ],
+        domains: ['localhost'],
+        // remotePatterns: [
+        //     {
+        //         protocol: 'https',
+        //         hostname: 'media.istockphoto.com',
+        //     },
+
+
+        // ],
     },
 }
 

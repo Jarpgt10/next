@@ -1,13 +1,15 @@
 import FooterMenu from '@/components/FooterMenu'
+import { DashboardState } from '@/context/ContextDashboard'
 import React from 'react'
 
 export default function DashboardLayout({ children }) {
     return (
-
-        <div>
-            {children}
-            <FooterMenu />
-        </div>
+        <DashboardState>
+            <div>
+                {children}
+                <FooterMenu />
+            </div>
+        </DashboardState>
 
 
     )

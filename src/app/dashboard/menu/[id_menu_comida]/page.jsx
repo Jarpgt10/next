@@ -10,6 +10,7 @@ const getMenu = async (id) => {
         nombre_menu: opt.nombre_menu,
         precio: opt.precio,
         detalle: opt.detalle,
+        url_img: opt.url_img,
     }));
 }
 
@@ -31,7 +32,7 @@ export default async function DetalleMenu({ params }) {
                                 className='rounded-full shadow-lg shadow-[#0000004b]'
                                 key={item.id_menu_comida}
                                 alt={`menu ${item.nombre_menu} donde panchito`}
-                                src={'https://cdn.pixabay.com/photo/2022/08/29/17/45/burger-7419428_640.jpg'}
+                                src={item.url_img ? item.url_img : 'http://localhost:8080/Dp/back/img/papas.avif'}
                                 width={200}
                                 height={200}
                             />

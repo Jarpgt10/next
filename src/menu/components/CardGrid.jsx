@@ -26,7 +26,7 @@ export default function CardGrid() {
                                         key={opt.id_menu_comida}
                                         name={opt.nombre_menu}
 
-                                        url_img='https://cdn.pixabay.com/photo/2022/08/29/17/45/burger-7419428_640.jpg'
+                                        url_img={opt.url_img ? opt.url_img : 'http://localhost:8080/Dp/back/img/papas.avif'}
                                         precio={opt.precio}
                                         id_menu_comida={opt.id_menu_comida} />
                                 ))
